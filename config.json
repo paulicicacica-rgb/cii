@@ -1,0 +1,1788 @@
+{
+  "site": {
+    "domain": "https://www.carinsuranceimmigrants.us",
+    "name": "Car Insurance Immigrants",
+    "tagline": "Car Insurance for Immigrants in the US — Every Question Answered",
+    "description": "Free, accurate car insurance information for immigrants in the United States. No SSN, foreign license, ITIN, undocumented — we answer every question in your language.",
+    "email": "info@carinsuranceimmigrants.us",
+    "founded": "2025",
+    "niche": "car_insurance",
+    "monetization": {
+      "active": false,
+      "sarah_chat": false,
+      "affiliate_links": false,
+      "affiliate_zebra": "https://www.thezebra.com",
+      "affiliate_everquote": "https://www.everquote.com",
+      "affiliate_insurify": "https://www.insurify.com",
+      "cta_text": "Compare rates from insurers that work with immigrants"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "prefix": "",
+      "name": "English",
+      "dir": "ltr",
+      "hreflang": "en",
+      "community": "General US immigrants"
+    },
+    {
+      "code": "es",
+      "prefix": "es",
+      "name": "Español",
+      "dir": "ltr",
+      "hreflang": "es",
+      "community": "Mexican, Central American, South American immigrants"
+    },
+    {
+      "code": "zh",
+      "prefix": "zh",
+      "name": "中文",
+      "dir": "ltr",
+      "hreflang": "zh",
+      "community": "Chinese immigrants"
+    },
+    {
+      "code": "ar",
+      "prefix": "ar",
+      "name": "العربية",
+      "dir": "rtl",
+      "hreflang": "ar",
+      "community": "Arab immigrants, Dearborn MI, New York"
+    },
+    {
+      "code": "pt",
+      "prefix": "pt",
+      "name": "Português",
+      "dir": "ltr",
+      "hreflang": "pt-BR",
+      "community": "Brazilian immigrants, Massachusetts, New Jersey"
+    },
+    {
+      "code": "vi",
+      "prefix": "vi",
+      "name": "Tiếng Việt",
+      "dir": "ltr",
+      "hreflang": "vi",
+      "community": "Vietnamese immigrants, California, Texas"
+    },
+    {
+      "code": "tl",
+      "prefix": "tl",
+      "name": "Filipino",
+      "dir": "ltr",
+      "hreflang": "tl",
+      "community": "Filipino immigrants, California, Hawaii"
+    },
+    {
+      "code": "ko",
+      "prefix": "ko",
+      "name": "한국어",
+      "dir": "ltr",
+      "hreflang": "ko",
+      "community": "Korean immigrants, California, New York, New Jersey"
+    },
+    {
+      "code": "ru",
+      "prefix": "ru",
+      "name": "Русский",
+      "dir": "ltr",
+      "hreflang": "ru",
+      "community": "Russian, Ukrainian immigrants, New York, California"
+    },
+    {
+      "code": "pl",
+      "prefix": "pl",
+      "name": "Polski",
+      "dir": "ltr",
+      "hreflang": "pl",
+      "community": "Polish immigrants, Chicago, New York, New Jersey"
+    }
+  ],
+  "top_states": [
+    "California",
+    "Texas",
+    "Florida",
+    "New York",
+    "Illinois",
+    "New Jersey",
+    "Arizona",
+    "Georgia",
+    "North Carolina",
+    "Washington",
+    "Virginia",
+    "Colorado",
+    "Nevada",
+    "Massachusetts",
+    "Maryland",
+    "Michigan",
+    "Pennsylvania",
+    "Oregon",
+    "Minnesota",
+    "Connecticut"
+  ],
+  "all_states": [
+    "Alabama",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "Florida",
+    "Georgia",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming"
+  ],
+  "insurers": [
+    {
+      "name": "Progressive",
+      "accepts_itin": true,
+      "accepts_foreign_license": true,
+      "slug": "progressive",
+      "notes": "Most immigrant-friendly major insurer. Accepts ITIN in all states."
+    },
+    {
+      "name": "GEICO",
+      "accepts_itin": true,
+      "accepts_foreign_license": true,
+      "slug": "geico",
+      "notes": "Accepts ITIN. Foreign license acceptance varies by state."
+    },
+    {
+      "name": "State Farm",
+      "accepts_itin": true,
+      "accepts_foreign_license": true,
+      "slug": "state-farm",
+      "notes": "Accepts ITIN. Local agent discretion on foreign licenses."
+    },
+    {
+      "name": "Allstate",
+      "accepts_itin": true,
+      "accepts_foreign_license": true,
+      "slug": "allstate",
+      "notes": "Accepts ITIN in most states."
+    },
+    {
+      "name": "Farmers",
+      "accepts_itin": true,
+      "accepts_foreign_license": true,
+      "slug": "farmers",
+      "notes": "Good for immigrants in Western states."
+    },
+    {
+      "name": "Nationwide",
+      "accepts_itin": true,
+      "accepts_foreign_license": false,
+      "slug": "nationwide",
+      "notes": "ITIN accepted, foreign license requirements strict."
+    },
+    {
+      "name": "Liberty Mutual",
+      "accepts_itin": true,
+      "accepts_foreign_license": true,
+      "slug": "liberty-mutual",
+      "notes": "Accepts ITIN. Good rates for new immigrants."
+    },
+    {
+      "name": "USAA",
+      "accepts_itin": false,
+      "accepts_foreign_license": false,
+      "slug": "usaa",
+      "notes": "Military families only. Not available to most immigrants."
+    },
+    {
+      "name": "Travelers",
+      "accepts_itin": true,
+      "accepts_foreign_license": true,
+      "slug": "travelers",
+      "notes": "Accepts ITIN in most states."
+    },
+    {
+      "name": "The General",
+      "accepts_itin": true,
+      "accepts_foreign_license": true,
+      "slug": "the-general",
+      "notes": "Specializes in high-risk drivers. Good for immigrants with no US record."
+    }
+  ],
+  "foreign_licenses": [
+    {
+      "country": "Mexico",
+      "slug": "mexican",
+      "top_states": [
+        "Texas",
+        "California",
+        "Illinois",
+        "Arizona",
+        "Florida"
+      ]
+    },
+    {
+      "country": "India",
+      "slug": "indian",
+      "top_states": [
+        "California",
+        "New Jersey",
+        "Texas",
+        "New York",
+        "Illinois"
+      ]
+    },
+    {
+      "country": "Philippines",
+      "slug": "philippine",
+      "top_states": [
+        "California",
+        "Hawaii",
+        "Nevada",
+        "Washington",
+        "Texas"
+      ]
+    },
+    {
+      "country": "China",
+      "slug": "chinese",
+      "top_states": [
+        "California",
+        "New York",
+        "Texas",
+        "Massachusetts",
+        "Washington"
+      ]
+    },
+    {
+      "country": "Brazil",
+      "slug": "brazilian",
+      "top_states": [
+        "Florida",
+        "Massachusetts",
+        "New Jersey",
+        "New York",
+        "California"
+      ]
+    },
+    {
+      "country": "El Salvador",
+      "slug": "salvadoran",
+      "top_states": [
+        "California",
+        "Texas",
+        "Virginia",
+        "Maryland",
+        "New York"
+      ]
+    },
+    {
+      "country": "Guatemala",
+      "slug": "guatemalan",
+      "top_states": [
+        "California",
+        "Florida",
+        "Texas",
+        "New York",
+        "Illinois"
+      ]
+    },
+    {
+      "country": "Honduras",
+      "slug": "honduran",
+      "top_states": [
+        "Florida",
+        "Texas",
+        "California",
+        "New York",
+        "Virginia"
+      ]
+    },
+    {
+      "country": "Colombia",
+      "slug": "colombian",
+      "top_states": [
+        "Florida",
+        "New York",
+        "New Jersey",
+        "Texas",
+        "California"
+      ]
+    },
+    {
+      "country": "South Korea",
+      "slug": "korean",
+      "top_states": [
+        "California",
+        "New York",
+        "New Jersey",
+        "Georgia",
+        "Virginia"
+      ]
+    },
+    {
+      "country": "Romania",
+      "slug": "romanian",
+      "top_states": [
+        "New York",
+        "California",
+        "Florida",
+        "Illinois",
+        "Michigan"
+      ]
+    },
+    {
+      "country": "Poland",
+      "slug": "polish",
+      "top_states": [
+        "Illinois",
+        "New York",
+        "New Jersey",
+        "Michigan",
+        "Pennsylvania"
+      ]
+    }
+  ],
+  "pillars": [
+    {
+      "id": "getting-insured",
+      "slug": "getting-insured",
+      "title": "Getting Insured",
+      "icon": "🚗",
+      "description": "Everything you need to know about getting car insurance as an immigrant in the US — regardless of your documentation status.",
+      "pages": [
+        {
+          "slug": "getting-insured",
+          "title": "Car Insurance for Immigrants — Complete Guide",
+          "type": "hub",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "no-ssn",
+            "foreign-license",
+            "questions/can-undocumented-get-car-insurance"
+          ],
+          "immigrant_angle": "The complete guide to getting car insurance in the US as an immigrant — what you need, what you don't need, and how to get covered today regardless of status."
+        },
+        {
+          "slug": "getting-insured/no-ssn",
+          "title": "Car Insurance Without a Social Security Number",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 8,
+          "related": [
+            "getting-insured/itin",
+            "getting-insured/foreign-license",
+            "questions/does-geico-require-ssn"
+          ],
+          "immigrant_angle": "Exact steps to get car insurance using ITIN instead of SSN. Which major insurers accept ITIN, what documents you need, and how to get covered same day."
+        },
+        {
+          "slug": "getting-insured/itin",
+          "title": "Car Insurance With an ITIN Number",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 8,
+          "related": [
+            "getting-insured/no-ssn",
+            "questions/what-is-itin-car-insurance"
+          ],
+          "immigrant_angle": "How to use your ITIN (Individual Taxpayer Identification Number) to get car insurance. Every major insurer that accepts ITIN with their specific requirements."
+        },
+        {
+          "slug": "getting-insured/foreign-license",
+          "title": "Car Insurance With a Foreign Driver's License",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 8,
+          "related": [
+            "getting-insured/no-ssn",
+            "license/foreign-license-valid-us"
+          ],
+          "immigrant_angle": "Which US insurers accept foreign licenses, how long your foreign license is valid, and what to do when it expires. State-by-state breakdown."
+        },
+        {
+          "slug": "getting-insured/undocumented",
+          "title": "Car Insurance for Undocumented Immigrants",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 10,
+          "related": [
+            "questions/can-undocumented-get-car-insurance",
+            "questions/will-insurance-company-call-ice",
+            "getting-insured/no-ssn"
+          ],
+          "immigrant_angle": "Undocumented immigrants can legally get car insurance in all 50 states. Which insurers, which documents, and whether it is safe — complete honest guide."
+        },
+        {
+          "slug": "getting-insured/no-credit-history",
+          "title": "Car Insurance With No US Credit History",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "getting-insured",
+            "getting-insured/new-immigrant"
+          ],
+          "immigrant_angle": "New immigrants have no US credit history — how this affects rates, which insurers look past it, and how to build credit to lower your premium."
+        },
+        {
+          "slug": "getting-insured/new-immigrant",
+          "title": "Car Insurance for New Immigrants — Just Arrived Guide",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 8,
+          "related": [
+            "getting-insured",
+            "getting-insured/no-ssn",
+            "getting-insured/foreign-license"
+          ],
+          "immigrant_angle": "Step-by-step car insurance guide for immigrants who just arrived in the US. What you need on day 1, week 1, and month 1."
+        },
+        {
+          "slug": "getting-insured/same-day",
+          "title": "Same Day Car Insurance for Immigrants",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 7,
+          "related": [
+            "getting-insured/new-immigrant",
+            "getting-insured/no-ssn"
+          ],
+          "immigrant_angle": "How to get car insurance the same day you need it as an immigrant — which insurers issue instant proof of insurance and what you need to have ready."
+        }
+      ]
+    },
+    {
+      "id": "by-status",
+      "slug": "by-status",
+      "title": "Insurance by Immigration Status",
+      "icon": "📋",
+      "description": "Car insurance requirements and options differ by immigration status. Find your exact situation.",
+      "pages": [
+        {
+          "slug": "by-status",
+          "title": "Car Insurance by Immigration Status — Find Your Situation",
+          "type": "hub",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "getting-insured/undocumented",
+            "by-status/daca",
+            "by-status/green-card"
+          ],
+          "immigrant_angle": "Your immigration status affects your insurance options. Find your exact situation — undocumented, DACA, work visa, green card, asylum, TPS."
+        },
+        {
+          "slug": "by-status/daca",
+          "title": "Car Insurance for DACA Recipients",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "by-status",
+            "getting-insured/itin",
+            "license/states-without-ssn"
+          ],
+          "immigrant_angle": "DACA recipients have EADs and SSNs — making insurance easier than for undocumented. Complete guide to the best rates and coverage for Dreamers."
+        },
+        {
+          "slug": "by-status/green-card",
+          "title": "Car Insurance for Green Card Holders",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "by-status",
+            "getting-insured"
+          ],
+          "immigrant_angle": "Green card holders have full access to all insurance options. How to get the best rates, use your foreign driving record, and build US insurance history."
+        },
+        {
+          "slug": "by-status/work-visa",
+          "title": "Car Insurance on a Work Visa (H1B, L1, O1)",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "by-status",
+            "getting-insured/foreign-license"
+          ],
+          "immigrant_angle": "H1B, L1, O1 and other work visa holders — how to get insurance immediately on arrival, transfer your foreign driving record, and what happens when your visa expires."
+        },
+        {
+          "slug": "by-status/student-visa",
+          "title": "Car Insurance for International Students (F1, J1)",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "by-status",
+            "getting-insured/foreign-license",
+            "getting-insured/no-credit-history"
+          ],
+          "immigrant_angle": "F1 and J1 student visa holders — cheapest car insurance options, using your home country license, and student discounts you qualify for."
+        },
+        {
+          "slug": "by-status/tps",
+          "title": "Car Insurance for TPS Holders",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "by-status",
+            "getting-insured/itin"
+          ],
+          "immigrant_angle": "Temporary Protected Status holders have work authorization and can get full car insurance. Which documents to use and best insurer options."
+        },
+        {
+          "slug": "by-status/asylum",
+          "title": "Car Insurance for Asylum Seekers and Refugees",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "by-status",
+            "getting-insured/itin",
+            "getting-insured/no-ssn"
+          ],
+          "immigrant_angle": "Asylum seekers and refugees — what documents to use before you have SSN, which states have special programs, and how to get insured while your case is pending."
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "slug": "questions",
+      "title": "Common Questions",
+      "icon": "❓",
+      "description": "The questions every immigrant asks about car insurance in the US — answered directly, honestly, in your language.",
+      "pages": [
+        {
+          "slug": "questions",
+          "title": "Car Insurance Questions for Immigrants — All Answered",
+          "type": "hub",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "getting-insured",
+            "by-status"
+          ],
+          "immigrant_angle": "Every question immigrants have about car insurance in the US — the ones nobody else answers honestly."
+        },
+        {
+          "slug": "questions/can-undocumented-get-car-insurance",
+          "title": "Can I Get Car Insurance if I'm Undocumented?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 10,
+          "related": [
+            "getting-insured/undocumented",
+            "questions/will-insurance-company-call-ice",
+            "getting-insured/no-ssn"
+          ],
+          "immigrant_angle": "Direct honest answer: yes, undocumented immigrants can get car insurance in all 50 states. Which insurers, which documents, is it safe, and what are your rights."
+        },
+        {
+          "slug": "questions/will-insurance-company-call-ice",
+          "title": "Will My Car Insurance Company Report Me to ICE?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "questions/can-undocumented-get-car-insurance",
+            "questions/is-it-safe-to-buy-insurance-undocumented"
+          ],
+          "immigrant_angle": "The most feared question — answered with legal citations. Insurance companies are not immigration enforcement. What the law says, what they can share, and your privacy rights."
+        },
+        {
+          "slug": "questions/is-it-safe-to-buy-insurance-undocumented",
+          "title": "Is It Safe to Buy Car Insurance as an Undocumented Immigrant?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "questions/will-insurance-company-call-ice",
+            "questions/can-undocumented-get-car-insurance"
+          ],
+          "immigrant_angle": "Privacy laws, what information insurers collect, what they cannot share with ICE, and why having insurance is safer than not having it."
+        },
+        {
+          "slug": "questions/accident-without-insurance-immigrant",
+          "title": "What Happens if I Get in an Accident Without Insurance as an Immigrant?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 9,
+          "related": [
+            "after-accident",
+            "after-accident/no-insurance",
+            "questions/accident-affect-immigration"
+          ],
+          "immigrant_angle": "The legal and immigration consequences of an accident without insurance — honest breakdown by state, what police do, what courts do, and whether it affects your status."
+        },
+        {
+          "slug": "questions/accident-affect-immigration",
+          "title": "Can a Car Accident Affect My Immigration Status?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "after-accident",
+            "questions/accident-without-insurance-immigrant"
+          ],
+          "immigrant_angle": "When a car accident can and cannot affect your immigration status — DUI, no insurance, no license, and fleeing the scene each carry different immigration consequences."
+        },
+        {
+          "slug": "questions/mexican-license-texas",
+          "title": "Can I Use My Mexican License for Car Insurance in Texas?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "foreign-license/mexican",
+            "license/mexican-license-us",
+            "states/texas"
+          ],
+          "immigrant_angle": "Texas-specific guide for Mexican license holders — which insurers accept it, how long it is valid, when you must get a Texas license, and average rates."
+        },
+        {
+          "slug": "questions/does-geico-require-ssn",
+          "title": "Does GEICO Require a Social Security Number?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "insurers/geico",
+            "getting-insured/no-ssn",
+            "getting-insured/itin"
+          ],
+          "immigrant_angle": "Exact answer on GEICO SSN requirements — ITIN acceptance, what to say when applying, and how to get a quote without an SSN."
+        },
+        {
+          "slug": "questions/same-day-insurance-new-arrival",
+          "title": "Can I Get Car Insurance the Same Day I Arrive in the US?",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 7,
+          "related": [
+            "getting-insured/same-day",
+            "getting-insured/new-immigrant"
+          ],
+          "immigrant_angle": "Yes — and here is exactly how. Which insurers give same-day coverage, what documents to bring, and how to get proof of insurance within hours of arrival."
+        },
+        {
+          "slug": "questions/what-is-itin-car-insurance",
+          "title": "What Is an ITIN and Can I Use It for Car Insurance?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 8,
+          "related": [
+            "getting-insured/itin",
+            "getting-insured/no-ssn"
+          ],
+          "immigrant_angle": "Complete explanation of ITIN for car insurance — what it is, how to get one from the IRS, which insurers accept it, and how to use it when applying."
+        },
+        {
+          "slug": "questions/no-credit-history-insurance",
+          "title": "How Do I Get Car Insurance With No US Credit History?",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "getting-insured/no-credit-history",
+            "getting-insured/new-immigrant"
+          ],
+          "immigrant_angle": "New immigrants have zero US credit history — how this affects premiums, which insurers do not use credit score, and how to get fair rates anyway."
+        },
+        {
+          "slug": "questions/insurance-if-deported",
+          "title": "What Happens to My Car Insurance if I'm Deported?",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "questions/can-undocumented-get-car-insurance",
+            "questions/will-insurance-company-call-ice"
+          ],
+          "immigrant_angle": "What happens to your policy, your car, your refund, and your family if you are deported — and how to plan ahead so your family is protected."
+        },
+        {
+          "slug": "questions/family-member-insure-car",
+          "title": "Can a Family Member Insure a Car in My Name?",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "getting-insured",
+            "questions/can-undocumented-get-car-insurance"
+          ],
+          "immigrant_angle": "When a family member can and cannot insure a car for you — named insured vs listed driver, what is legal, and how to handle shared family vehicles."
+        },
+        {
+          "slug": "questions/insurance-check-immigration-status",
+          "title": "Does Car Insurance Check Immigration Status?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "questions/will-insurance-company-call-ice",
+            "questions/is-it-safe-to-buy-insurance-undocumented"
+          ],
+          "immigrant_angle": "Exactly what car insurance companies check when you apply — and what they do not check. Immigration status is not a standard part of the insurance application."
+        }
+      ]
+    },
+    {
+      "id": "foreign-license",
+      "slug": "foreign-license",
+      "title": "Foreign License Insurance",
+      "icon": "🪪",
+      "description": "Using your home country driver's license for car insurance in the US — by country and by state.",
+      "pages": [
+        {
+          "slug": "foreign-license",
+          "title": "Car Insurance With a Foreign Driver's License — Complete Guide",
+          "type": "hub",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "getting-insured/foreign-license",
+            "license/foreign-license-valid-us"
+          ],
+          "immigrant_angle": "Which US insurers accept foreign licenses, how long they are valid, and what to do when your foreign license expires."
+        },
+        {
+          "slug": "foreign-license/mexican",
+          "title": "Car Insurance With a Mexican Driver's License",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 9,
+          "related": [
+            "foreign-license",
+            "questions/mexican-license-texas",
+            "states/california",
+            "states/texas"
+          ],
+          "immigrant_angle": "Mexican license holders — the most common situation in the US. Which insurers accept it, how long it is valid in each state, and when you must convert."
+        },
+        {
+          "slug": "foreign-license/indian",
+          "title": "Car Insurance With an Indian Driver's License",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "foreign-license",
+            "by-status/work-visa",
+            "states/california",
+            "states/new-jersey"
+          ],
+          "immigrant_angle": "Indian license holders on H1B, L1, or other visas — insurance options, IDP requirements, and how to transfer your Indian driving record for better rates."
+        },
+        {
+          "slug": "foreign-license/philippine",
+          "title": "Car Insurance With a Philippine Driver's License",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "foreign-license",
+            "states/california",
+            "states/hawaii"
+          ],
+          "immigrant_angle": "Filipino immigrants — insurance with Philippine license, states with best options, and how to convert your license quickly."
+        },
+        {
+          "slug": "foreign-license/chinese",
+          "title": "Car Insurance With a Chinese Driver's License",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "foreign-license",
+            "states/california",
+            "states/new-york"
+          ],
+          "immigrant_angle": "Chinese license holders face unique challenges — Chinese licenses are not recognized in most states for driving but can still affect insurance rates."
+        },
+        {
+          "slug": "foreign-license/brazilian",
+          "title": "Car Insurance With a Brazilian Driver's License",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "foreign-license",
+            "states/florida",
+            "states/massachusetts"
+          ],
+          "immigrant_angle": "Brazilian immigrants in Florida and Massachusetts — insurance options, Mercosur license reciprocity, and how to get covered quickly."
+        },
+        {
+          "slug": "foreign-license/korean",
+          "title": "Car Insurance With a Korean Driver's License",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "foreign-license",
+            "states/california",
+            "states/new-jersey"
+          ],
+          "immigrant_angle": "Korean license holders — South Korea has reciprocity agreements with some US states. How to use your Korean driving record to get lower rates."
+        }
+      ]
+    },
+    {
+      "id": "after-accident",
+      "slug": "after-accident",
+      "title": "After an Accident",
+      "icon": "🚨",
+      "description": "What to do after a car accident as an immigrant — with or without insurance, with or without a license.",
+      "pages": [
+        {
+          "slug": "after-accident",
+          "title": "Car Accident as an Immigrant — What to Do",
+          "type": "hub",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 8,
+          "related": [
+            "after-accident/no-insurance",
+            "after-accident/no-license",
+            "questions/accident-affect-immigration"
+          ],
+          "immigrant_angle": "Step-by-step guide for immigrants after a car accident — what to say, what not to say, what police can and cannot do, and how to protect your rights."
+        },
+        {
+          "slug": "after-accident/no-insurance",
+          "title": "Car Accident Without Insurance — Immigrant Guide",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 9,
+          "related": [
+            "after-accident",
+            "questions/accident-without-insurance-immigrant",
+            "questions/accident-affect-immigration"
+          ],
+          "immigrant_angle": "The legal consequences of an accident without insurance as an immigrant — state fines, license suspension, civil liability, and immigration impact."
+        },
+        {
+          "slug": "after-accident/no-license",
+          "title": "Car Accident Without a License — Immigrant Rights",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 9,
+          "related": [
+            "after-accident",
+            "after-accident/no-insurance",
+            "questions/accident-affect-immigration"
+          ],
+          "immigrant_angle": "Driving without a license is a serious charge — but it does not automatically mean deportation. What happens, what your rights are, and how to handle it."
+        },
+        {
+          "slug": "after-accident/no-english",
+          "title": "Car Accident With No English — What to Do",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 7,
+          "related": [
+            "after-accident"
+          ],
+          "immigrant_angle": "Your right to an interpreter after an accident. What to say to police, what to say to the other driver, and key phrases in English every immigrant should know."
+        },
+        {
+          "slug": "after-accident/hit-by-uninsured",
+          "title": "Hit by an Uninsured Driver as an Immigrant",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "after-accident",
+            "coverage/uninsured-motorist"
+          ],
+          "immigrant_angle": "What to do when the other driver has no insurance — your options as an immigrant, uninsured motorist coverage, and how to get compensation."
+        },
+        {
+          "slug": "after-accident/sr22",
+          "title": "SR-22 Insurance for Immigrants",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "after-accident",
+            "getting-insured"
+          ],
+          "immigrant_angle": "What SR-22 is, when immigrants need it, which insurers offer it without SSN, and how much it costs — by state."
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "slug": "coverage",
+      "title": "Coverage Explained",
+      "icon": "🛡️",
+      "description": "US car insurance coverage types explained simply for immigrants — what you must have, what is optional, and what actually protects you.",
+      "pages": [
+        {
+          "slug": "coverage",
+          "title": "Car Insurance Coverage Explained for Immigrants",
+          "type": "hub",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "coverage/liability",
+            "coverage/full-coverage",
+            "coverage/minimum-by-state"
+          ],
+          "immigrant_angle": "US car insurance is different from most countries. Plain-language explanation of every coverage type and what immigrants actually need."
+        },
+        {
+          "slug": "coverage/liability",
+          "title": "Liability Car Insurance — What It Means for Immigrants",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 6,
+          "related": [
+            "coverage",
+            "coverage/minimum-by-state"
+          ],
+          "immigrant_angle": "Liability insurance is required in almost every state. What it covers, what it does not, and why the minimum is rarely enough."
+        },
+        {
+          "slug": "coverage/full-coverage",
+          "title": "Full Coverage Car Insurance for Immigrants — Is It Worth It?",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 6,
+          "related": [
+            "coverage",
+            "coverage/liability"
+          ],
+          "immigrant_angle": "What full coverage actually means, when you need it, and whether it is worth the extra cost for immigrants — especially those with older cars."
+        },
+        {
+          "slug": "coverage/minimum-by-state",
+          "title": "Minimum Car Insurance Requirements by State — 2025",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 6,
+          "related": [
+            "coverage",
+            "states"
+          ],
+          "immigrant_angle": "Every state has different minimum insurance requirements. Complete table of minimums, average costs, and which states are strictest about enforcement."
+        },
+        {
+          "slug": "coverage/uninsured-motorist",
+          "title": "Uninsured Motorist Coverage — Essential for Immigrants",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 6,
+          "related": [
+            "coverage",
+            "after-accident/hit-by-uninsured"
+          ],
+          "immigrant_angle": "Uninsured motorist coverage protects you when the other driver has no insurance — critically important in states with high uninsured rates."
+        }
+      ]
+    },
+    {
+      "id": "insurers",
+      "slug": "insurers",
+      "title": "Insurance Companies",
+      "icon": "🏢",
+      "description": "Which car insurance companies work best for immigrants — who accepts ITIN, who accepts foreign licenses, and who has the best rates.",
+      "pages": [
+        {
+          "slug": "insurers",
+          "title": "Best Car Insurance Companies for Immigrants",
+          "type": "hub",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "getting-insured/no-ssn",
+            "getting-insured/itin"
+          ],
+          "immigrant_angle": "Ranked comparison of every major US insurer for immigrants — ITIN acceptance, foreign license policy, rates for new immigrants, and which to avoid."
+        },
+        {
+          "slug": "insurers/accept-itin",
+          "title": "Car Insurance Companies That Accept ITIN — Full List",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "insurers",
+            "getting-insured/itin",
+            "getting-insured/no-ssn"
+          ],
+          "immigrant_angle": "The definitive list of US car insurance companies that accept ITIN instead of SSN — with specific requirements, notes, and how to apply at each one."
+        }
+      ]
+    },
+    {
+      "id": "license",
+      "slug": "license",
+      "title": "Driver's License Guide",
+      "icon": "🪪",
+      "description": "Getting a driver's license as an immigrant — which states allow it, how to convert your foreign license, and how it affects your insurance.",
+      "pages": [
+        {
+          "slug": "license",
+          "title": "Driver's License for Immigrants — Complete US Guide",
+          "type": "hub",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "license/states-without-ssn",
+            "license/foreign-license-valid-us",
+            "getting-insured/foreign-license"
+          ],
+          "immigrant_angle": "Getting a driver's license as an immigrant in the US — which states issue licenses regardless of immigration status, what documents you need, and how it affects insurance."
+        },
+        {
+          "slug": "license/states-without-ssn",
+          "title": "States That Issue Driver's Licenses Without SSN — 2025",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "license",
+            "getting-insured/undocumented",
+            "getting-insured/no-ssn"
+          ],
+          "immigrant_angle": "19 states and DC issue driver's licenses regardless of immigration status. Complete list with requirements, documents needed, and how this affects your insurance options."
+        },
+        {
+          "slug": "license/foreign-license-valid-us",
+          "title": "How Long Is a Foreign Driver's License Valid in the US?",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "license",
+            "getting-insured/foreign-license",
+            "foreign-license"
+          ],
+          "immigrant_angle": "State-by-state breakdown of how long you can drive on a foreign license, when you must get a US license, and how to use an International Driving Permit."
+        },
+        {
+          "slug": "license/international-driving-permit",
+          "title": "International Driving Permit (IDP) and Car Insurance",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "license",
+            "getting-insured/foreign-license"
+          ],
+          "immigrant_angle": "What an IDP is, where to get one, which states require it vs just a foreign license, and whether it helps you get car insurance."
+        },
+        {
+          "slug": "license/convert-foreign-license",
+          "title": "How to Convert a Foreign License to a US Driver's License",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 7,
+          "related": [
+            "license",
+            "license/states-without-ssn"
+          ],
+          "immigrant_angle": "Step-by-step guide to converting your foreign license — which states have reciprocity, which require a full driving test, and how conversion lowers your insurance rates."
+        }
+      ]
+    },
+    {
+      "id": "states",
+      "slug": "states",
+      "title": "By State",
+      "icon": "📍",
+      "description": "Car insurance for immigrants in every US state — minimums, ITIN acceptance, license rules, and average rates.",
+      "pages": [
+        {
+          "slug": "states",
+          "title": "Car Insurance for Immigrants by State",
+          "type": "hub",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 6,
+          "related": [
+            "coverage/minimum-by-state",
+            "license/states-without-ssn"
+          ],
+          "immigrant_angle": "Car insurance rules for immigrants vary dramatically by state. Find your state for specific requirements, which insurers operate there, and average rates."
+        },
+        {
+          "slug": "states/california",
+          "title": "Car Insurance for Immigrants in California",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "states",
+            "license/states-without-ssn",
+            "foreign-license/mexican"
+          ],
+          "immigrant_angle": "California is the most immigrant-friendly state — AB 60 licenses, ITIN accepted by all major insurers, and the largest immigrant population in the US."
+        },
+        {
+          "slug": "states/texas",
+          "title": "Car Insurance for Immigrants in Texas",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "states",
+            "questions/mexican-license-texas",
+            "foreign-license/mexican"
+          ],
+          "immigrant_angle": "Texas requires SSN for a state license but ITIN is accepted by most insurers. Large Mexican and Central American immigrant community with specific options."
+        },
+        {
+          "slug": "states/florida",
+          "title": "Car Insurance for Immigrants in Florida",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "states",
+            "foreign-license/brazilian",
+            "foreign-license/colombian"
+          ],
+          "immigrant_angle": "Florida has a large Cuban, Venezuelan, Colombian, and Brazilian immigrant community. No-fault insurance state with specific rules immigrants must understand."
+        },
+        {
+          "slug": "states/new-york",
+          "title": "Car Insurance for Immigrants in New York",
+          "type": "page",
+          "priority": 1.0,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 8,
+          "related": [
+            "states",
+            "license/states-without-ssn"
+          ],
+          "immigrant_angle": "New York issues licenses regardless of immigration status since 2019. No-fault state with high minimums — complete guide for immigrants."
+        },
+        {
+          "slug": "states/illinois",
+          "title": "Car Insurance for Immigrants in Illinois",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "states",
+            "license/states-without-ssn"
+          ],
+          "immigrant_angle": "Illinois issues TVDL licenses for immigrants and has a large Polish, Mexican, and Indian immigrant community. Full guide to insurance options."
+        },
+        {
+          "slug": "states/new-jersey",
+          "title": "Car Insurance for Immigrants in New Jersey",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "states"
+          ],
+          "immigrant_angle": "New Jersey has one of the highest car insurance rates in the US. How immigrants can get covered at reasonable rates with ITIN or foreign license."
+        },
+        {
+          "slug": "states/arizona",
+          "title": "Car Insurance for Immigrants in Arizona",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "states",
+            "foreign-license/mexican"
+          ],
+          "immigrant_angle": "Arizona has a large Mexican immigrant community. SSN required for AZ license, but ITIN accepted by most insurers. Full guide."
+        },
+        {
+          "slug": "states/georgia",
+          "title": "Car Insurance for Immigrants in Georgia",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "states"
+          ],
+          "immigrant_angle": "Georgia has a rapidly growing immigrant population, especially in Atlanta. Insurance options for immigrants with ITIN or foreign license."
+        },
+        {
+          "slug": "states/washington",
+          "title": "Car Insurance for Immigrants in Washington State",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "states",
+            "license/states-without-ssn"
+          ],
+          "immigrant_angle": "Washington issues licenses regardless of status. Large Asian immigrant community. Full guide to insurance options."
+        },
+        {
+          "slug": "states/north-carolina",
+          "title": "Car Insurance for Immigrants in North Carolina",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 6,
+          "related": [
+            "states"
+          ],
+          "immigrant_angle": "North Carolina has a growing Mexican and Central American community. Insurance options with ITIN and foreign license."
+        }
+      ]
+    },
+    {
+      "id": "save-money",
+      "slug": "save-money",
+      "title": "Save Money on Insurance",
+      "icon": "💰",
+      "description": "How immigrants can get the lowest possible car insurance rates — discounts, comparison strategies, and money-saving tips.",
+      "pages": [
+        {
+          "slug": "save-money",
+          "title": "How Immigrants Can Save Money on Car Insurance",
+          "type": "hub",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 7,
+          "related": [
+            "getting-insured",
+            "insurers"
+          ],
+          "immigrant_angle": "Immigrants often overpay for car insurance because they don't know their options. Every money-saving strategy that works without US credit history or SSN."
+        },
+        {
+          "slug": "save-money/compare-quotes",
+          "title": "How to Compare Car Insurance Quotes as an Immigrant",
+          "type": "page",
+          "priority": 0.9,
+          "schema": [
+            "WebPage",
+            "FAQPage",
+            "HowTo"
+          ],
+          "faq_count": 7,
+          "related": [
+            "save-money",
+            "insurers"
+          ],
+          "immigrant_angle": "Step-by-step guide to comparing quotes as an immigrant — what information to have ready, which comparison sites work without SSN, and how to evaluate offers."
+        },
+        {
+          "slug": "save-money/discounts",
+          "title": "Car Insurance Discounts for Immigrants",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 6,
+          "related": [
+            "save-money"
+          ],
+          "immigrant_angle": "Every car insurance discount immigrants can qualify for — good driver, multi-car, telematics, pay-in-full, and how to ask for them."
+        },
+        {
+          "slug": "save-money/pay-per-mile",
+          "title": "Pay-Per-Mile Car Insurance for Immigrants",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 6,
+          "related": [
+            "save-money",
+            "getting-insured"
+          ],
+          "immigrant_angle": "Pay-per-mile insurance (Metromile, Milewise) can save immigrants who don't drive much up to 50%. How it works, who offers it, and whether ITIN is accepted."
+        },
+        {
+          "slug": "save-money/non-owner",
+          "title": "Non-Owner Car Insurance for Immigrants",
+          "type": "page",
+          "priority": 0.8,
+          "schema": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "faq_count": 6,
+          "related": [
+            "save-money",
+            "getting-insured"
+          ],
+          "immigrant_angle": "If you don't own a car but drive borrowed or rental cars — non-owner insurance is cheap and builds your US insurance history."
+        }
+      ]
+    }
+  ],
+  "community_pages": [
+    {
+      "lang": "es",
+      "pages": [
+        {
+          "slug": "es/seguro-con-licencia-mexicana",
+          "title": "Seguro de Auto con Licencia Mexicana en Estados Unidos",
+          "priority": 1.0
+        },
+        {
+          "slug": "es/seguro-sin-numero-seguro-social",
+          "title": "Seguro de Auto Sin Número de Seguro Social",
+          "priority": 1.0
+        },
+        {
+          "slug": "es/aseguranza-para-indocumentados",
+          "title": "Aseguranza de Carro para Indocumentados",
+          "priority": 1.0
+        },
+        {
+          "slug": "es/seguro-con-matricula-consular",
+          "title": "Seguro de Auto con Matrícula Consular",
+          "priority": 0.9
+        },
+        {
+          "slug": "es/seguro-para-dreamer-daca",
+          "title": "Seguro de Auto para Dreamers y Beneficiarios de DACA",
+          "priority": 0.9
+        }
+      ]
+    },
+    {
+      "lang": "zh",
+      "pages": [
+        {
+          "slug": "zh/chinese-license-car-insurance-us",
+          "title": "持中国驾照在美国购买汽车保险指南",
+          "priority": 1.0
+        },
+        {
+          "slug": "zh/car-insurance-no-ssn-chinese",
+          "title": "没有社会安全号码如何购买汽车保险",
+          "priority": 1.0
+        },
+        {
+          "slug": "zh/new-chinese-immigrant-car-insurance",
+          "title": "新移民汽车保险完整指南",
+          "priority": 0.9
+        }
+      ]
+    },
+    {
+      "lang": "ar",
+      "pages": [
+        {
+          "slug": "ar/car-insurance-arab-immigrants",
+          "title": "تأمين السيارة للمهاجرين العرب في أمريكا",
+          "priority": 1.0
+        },
+        {
+          "slug": "ar/car-insurance-dearborn-michigan",
+          "title": "تأمين السيارة للمجتمع العربي في ديربورن ميشيغان",
+          "priority": 1.0
+        }
+      ]
+    },
+    {
+      "lang": "vi",
+      "pages": [
+        {
+          "slug": "vi/bao-hiem-xe-khong-co-ssn",
+          "title": "Bảo Hiểm Xe Không Cần Số An Sinh Xã Hội",
+          "priority": 1.0
+        },
+        {
+          "slug": "vi/bao-hiem-xe-cho-nguoi-nhap-cu",
+          "title": "Hướng Dẫn Bảo Hiểm Xe Cho Người Nhập Cư Việt Nam",
+          "priority": 1.0
+        }
+      ]
+    },
+    {
+      "lang": "tl",
+      "pages": [
+        {
+          "slug": "tl/car-insurance-philippine-license",
+          "title": "Car Insurance Gamit ang Lisensya ng Pilipinas sa US",
+          "priority": 1.0
+        },
+        {
+          "slug": "tl/car-insurance-para-sa-immigrants",
+          "title": "Gabay sa Car Insurance para sa mga Filipino Immigrant",
+          "priority": 1.0
+        }
+      ]
+    },
+    {
+      "lang": "ko",
+      "pages": [
+        {
+          "slug": "ko/korean-license-car-insurance-us",
+          "title": "한국 운전면허로 미국 자동차 보험 가입하기",
+          "priority": 1.0
+        },
+        {
+          "slug": "ko/car-insurance-korean-immigrants",
+          "title": "한인 이민자를 위한 자동차 보험 완벽 가이드",
+          "priority": 1.0
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "pages": [
+        {
+          "slug": "pt/seguro-carro-imigrantes-brasileiros",
+          "title": "Seguro de Carro para Imigrantes Brasileiros nos EUA",
+          "priority": 1.0
+        },
+        {
+          "slug": "pt/seguro-sem-ssn-brasil",
+          "title": "Como Obter Seguro de Carro Sem SSN nos EUA",
+          "priority": 1.0
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "pages": [
+        {
+          "slug": "ru/strahovka-bez-ssn",
+          "title": "Страховка Автомобиля Без Номера Социального Страхования",
+          "priority": 1.0
+        },
+        {
+          "slug": "ru/avtostrahovka-dlya-immigrantov",
+          "title": "Автострахование для Иммигрантов в США",
+          "priority": 1.0
+        }
+      ]
+    },
+    {
+      "lang": "pl",
+      "pages": [
+        {
+          "slug": "pl/ubezpieczenie-samochodu-bez-ssn",
+          "title": "Ubezpieczenie Samochodu Bez Numeru SSN w USA",
+          "priority": 1.0
+        },
+        {
+          "slug": "pl/ubezpieczenie-dla-imigrantow",
+          "title": "Ubezpieczenie Samochodu dla Imigrantów w USA",
+          "priority": 1.0
+        }
+      ]
+    }
+  ]
+}
