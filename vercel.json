@@ -1,0 +1,41 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/build\\.py",
+      "dest": "/404"
+    },
+    {
+      "src": "/config\\.json",
+      "dest": "/404"
+    },
+    {
+      "src": "/template\\.html",
+      "dest": "/404"
+    },
+    {
+      "src": "/prompts\\.py",
+      "dest": "/404"
+    },
+    {
+      "src": "/README\\.md",
+      "dest": "/404"
+    }
+  ]
+}
