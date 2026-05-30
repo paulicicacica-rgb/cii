@@ -12,7 +12,7 @@ from prompts import (SYSTEM_PROMPT, meta_prompt, sections_prompt, table_prompt,
                      state_table_prompt, state_faq_prompt, homepage_prompt)
 
 client     = anthropic.Anthropic()
-MODEL      = "claude-sonnet-4-6"
+MODEL = "claude-haiku-4-5-20251001" 
 OUTPUT_DIR = Path(".")
 
 with open("config.json") as f:
