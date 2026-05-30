@@ -16,6 +16,36 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.carinsuranceimmigrants.us/ar/by-status/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/ar/by-status/daca/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/ar/by-status/green-card/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/ar/by-status/student-visa/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/ar/by-status/tps/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/ar/by-status/work-visa/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.carinsuranceimmigrants.us/ar/getting-insured/</loc>
     <lastmod>2026-05-30</lastmod>
     <priority>1.0</priority>
@@ -276,6 +306,41 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.carinsuranceimmigrants.us/pt/by-status/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/pt/by-status/asylum/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/pt/by-status/daca/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/pt/by-status/green-card/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/pt/by-status/student-visa/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/pt/by-status/tps/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/pt/by-status/work-visa/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.carinsuranceimmigrants.us/pt/getting-insured/</loc>
     <lastmod>2026-05-30</lastmod>
     <priority>1.0</priority>
@@ -409,6 +474,21 @@
     <loc>https://www.carinsuranceimmigrants.us/vi/</loc>
     <lastmod>2026-05-30</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/vi/by-status/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/vi/by-status/student-visa/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.carinsuranceimmigrants.us/vi/by-status/tps/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.carinsuranceimmigrants.us/vi/getting-insured/</loc>
