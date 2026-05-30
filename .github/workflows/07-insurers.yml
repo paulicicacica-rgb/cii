@@ -1,4 +1,4 @@
-name: "08 — Driver License Guide"
+name: "07 — Insurance Companies"
 
 on:
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
       - name: Build
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python3 build.py --section=license --lang=${{ github.event.inputs.lang }}
+        run: python3 build.py --section=insurers --lang=${{ github.event.inputs.lang }}
 
       - name: Commit and push
         run: |
