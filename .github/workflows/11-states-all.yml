@@ -19,18 +19,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Clean pycache
-        run: |
-          find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
-          find . -name "*.pyc" -delete 2>/dev/null || true
-          find . -name "*.pyo" -delete 2>/dev/null || true
-          echo "__pycache__/" >> .gitignore
-          echo "*.pyc" >> .gitignore
-          echo "*.pyo" >> .gitignore
-          git add .gitignore
-          git diff --staged --quiet || git commit -m "chore: update gitignore"
-          git push origin main || true
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
