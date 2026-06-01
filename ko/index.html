@@ -756,84 +756,239 @@
   }
 </script>
 
-<!-- Sarah AI Widget -->
-<div id="sarah-widget" style="position:fixed;bottom:24px;right:24px;z-index:9999;font-family:system-ui,sans-serif">
-  <div id="sarah-bubble" style="display:none;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.18);width:340px;max-height:500px;flex-direction:column;overflow:hidden;direction:ltr">
-    <div style="background:linear-gradient(135deg,#0f2944,#1a4a7a);padding:16px 20px;display:flex;align-items:center;gap:12px">
-      <div style="width:40px;height:40px;background:#f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem">🤖</div>
-      <div>
+
+
+<!-- Sarah Widget -->
+<div id="sarah-container" style="position:fixed;bottom:24px;right:24px;z-index:9999;width:360px;max-width:calc(100vw - 32px);font-family:system-ui,-apple-system,sans-serif;direction:ltr">
+  
+  <!-- Toggle button (shown when minimized) -->
+  <button id="sarah-toggle" onclick="toggleSarah()" style="display:none;background:linear-gradient(135deg,#1a4a7a,#0f2944);color:#fff;border:none;border-radius:30px;padding:12px 24px;font-size:0.95rem;font-weight:600;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);width:100%">
+    Chat with Sarah — Car Insurance Help
+  </button>
+
+  <!-- Main panel -->
+  <div id="sarah-panel" style="background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden">
+    
+    <!-- Header -->
+    <div style="background:linear-gradient(135deg,#0f2944,#1a4a7a);padding:16px 20px;display:flex;align-items:center;gap:14px">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" 
+           alt="Sarah" 
+           style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.3)"
+           onerror="this.style.display='none';document.getElementById('sarah-avatar-fallback').style.display='flex'">
+      <div id="sarah-avatar-fallback" style="display:none;width:48px;height:48px;background:#f59e0b;border-radius:50%;align-items:center;justify-content:center;font-size:1.4rem;color:#fff;font-weight:700;flex-shrink:0">S</div>
+      <div style="flex:1">
         <div style="color:#fff;font-weight:700;font-size:1rem">Sarah</div>
-        <div style="color:rgba(255,255,255,0.7);font-size:0.8rem">CarInsuranceImmigrants.us</div>
+        <div style="color:rgba(255,255,255,0.75);font-size:0.8rem">Car Insurance Specialist</div>
+        <div style="display:flex;align-items:center;gap:6px;margin-top:3px">
+          <div style="width:7px;height:7px;background:#22c55e;border-radius:50%"></div>
+          <span style="color:rgba(255,255,255,0.7);font-size:0.75rem">Online now</span>
+        </div>
       </div>
-      <button onclick="toggleSarah()" style="margin-left:auto;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:4px">×</button>
+      <button onclick="minimizeSarah()" style="background:none;border:none;color:rgba(255,255,255,0.7);font-size:1.2rem;cursor:pointer;padding:4px 8px;border-radius:4px" title="Minimize">—</button>
     </div>
-    <div id="sarah-messages" style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;min-height:200px;max-height:280px">
-      <div style="background:#f0f4f8;border-radius:12px 12px 12px 4px;padding:12px 14px;font-size:0.9rem;max-width:88%">안녕하세요! 저는 Sarah예요 👋 이민자들이 자동차 보험을 찾도록 도와드립니다 — SSN 없어도 되고, ICE에 신고하지 않으며, 완전 무료예요. 질문이 있으세요?</div>
+
+    <!-- Chat messages -->
+    <div id="sarah-messages" style="padding:16px;background:#f8fafc;min-height:80px;max-height:200px;overflow-y:auto;display:flex;flex-direction:column;gap:10px">
+      <div style="background:#fff;border-radius:12px 12px 12px 4px;padding:12px 14px;font-size:0.9rem;color:#374151;box-shadow:0 1px 4px rgba(0,0,0,0.08);max-width:90%;line-height:1.5">
+        Hi, I am Sarah. I help immigrants get car insurance in the US — regardless of your status, license type, or whether you have an SSN. Let me help you find coverage. To get started, tell me about your vehicle.
+      </div>
     </div>
-    <div style="padding:12px;border-top:1px solid #e5e7eb;display:flex;gap:8px">
-      <input id="sarah-input" type="text" placeholder="무엇이든 물어보세요..."
-        style="flex:1;border:1px solid #d1d5db;border-radius:8px;padding:10px 14px;font-size:0.9rem;outline:none;direction:ltr"
-        onkeydown="if(event.key==='Enter')sendSarah()">
-      <button onclick="sendSarah()"
-        style="background:#f59e0b;color:#fff;border:none;border-radius:8px;padding:10px 16px;font-weight:700;cursor:pointer;font-size:0.9rem">→</button>
+
+    <!-- Step 1: Vehicle Info -->
+    <div id="sarah-step1" style="padding:16px;border-top:1px solid #e5e7eb">
+      <div style="font-weight:700;color:#0f2944;margin-bottom:12px;font-size:0.95rem">Tell me about your vehicle</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+        <select id="s-year" style="border:1px solid #d1d5db;border-radius:8px;padding:9px 10px;font-size:0.88rem;background:#fff;color:#374151;width:100%">
+          <option value="">Vehicle Year</option>
+          <option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option>
+        </select>
+        <select id="s-make" style="border:1px solid #d1d5db;border-radius:8px;padding:9px 10px;font-size:0.88rem;background:#fff;color:#374151;width:100%">
+          <option value="">Vehicle Make</option>
+          <option value="Acura">Acura</option><option value="Audi">Audi</option><option value="BMW">BMW</option><option value="Buick">Buick</option><option value="Cadillac">Cadillac</option><option value="Chevrolet">Chevrolet</option><option value="Chrysler">Chrysler</option><option value="Dodge">Dodge</option><option value="Ford">Ford</option><option value="GMC">GMC</option><option value="Honda">Honda</option><option value="Hyundai">Hyundai</option><option value="Infiniti">Infiniti</option><option value="Jeep">Jeep</option><option value="Kia">Kia</option><option value="Lexus">Lexus</option><option value="Lincoln">Lincoln</option><option value="Mazda">Mazda</option><option value="Mercedes-Benz">Mercedes-Benz</option><option value="Mitsubishi">Mitsubishi</option><option value="Nissan">Nissan</option><option value="Ram">Ram</option><option value="Subaru">Subaru</option><option value="Tesla">Tesla</option><option value="Toyota">Toyota</option><option value="Volkswagen">Volkswagen</option><option value="Volvo">Volvo</option><option value="Other">Other</option>
+        </select>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+        <input id="s-model" type="text" placeholder="Vehicle Model"
+          style="border:1px solid #d1d5db;border-radius:8px;padding:9px 10px;font-size:0.88rem;color:#374151">
+        <select id="s-state" style="border:1px solid #d1d5db;border-radius:8px;padding:9px 10px;font-size:0.88rem;background:#fff;color:#374151;width:100%">
+          <option value="">Your State</option>
+          <option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option>
+        </select>
+      </div>
+      <button onclick="sarahStep2()" 
+        style="width:100%;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;border:none;border-radius:10px;padding:12px;font-size:0.95rem;font-weight:700;cursor:pointer">
+        Next
+      </button>
     </div>
+
+    <!-- Step 2: Personal Info (hidden initially) -->
+    <div id="sarah-step2" style="display:none;padding:16px;border-top:1px solid #e5e7eb">
+      <div style="font-weight:700;color:#0f2944;margin-bottom:12px;font-size:0.95rem">Tell me about yourself</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+        <input id="s-name" type="text" placeholder="Your First Name"
+          style="border:1px solid #d1d5db;border-radius:8px;padding:9px 10px;font-size:0.88rem">
+        <input id="s-phone" type="tel" placeholder="Phone Number"
+          style="border:1px solid #d1d5db;border-radius:8px;padding:9px 10px;font-size:0.88rem">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+        <select id="s-license" style="border:1px solid #d1d5db;border-radius:8px;padding:9px 10px;font-size:0.88rem;background:#fff;width:100%">
+          <option value="">License Type</option>
+          <option value="US License">US License</option><option value="Foreign License">Foreign License</option><option value="Mexican License (Matricula)">Mexican License (Matricula)</option><option value="International License">International License</option><option value="No License">No License</option>
+        </select>
+        <select id="s-status" style="border:1px solid #d1d5db;border-radius:8px;padding:9px 10px;font-size:0.88rem;background:#fff;width:100%">
+          <option value="">Immigration Status (Optional)</option>
+          <option value="Prefer not to say">Prefer not to say</option><option value="US Citizen">US Citizen</option><option value="Green Card">Green Card</option><option value="Work Visa">Work Visa</option><option value="DACA">DACA</option><option value="TPS">TPS</option><option value="Asylum">Asylum</option><option value="Undocumented">Undocumented</option>
+        </select>
+      </div>
+      <button onclick="sarahSubmit()"
+        style="width:100%;background:linear-gradient(135deg,#16a34a,#15803d);color:#fff;border:none;border-radius:10px;padding:12px;font-size:0.95rem;font-weight:700;cursor:pointer;margin-bottom:8px">
+        Get My Free Quote
+      </button>
+      <p style="font-size:0.75rem;color:#6b7280;text-align:center;margin:0">Your information is never shared with ICE or any government agency.</p>
+    </div>
+
+    <!-- Step 3: Chat (shown after form) -->
+    <div id="sarah-chat" style="display:none;padding:12px;border-top:1px solid #e5e7eb">
+      <div style="display:flex;gap:8px">
+        <input id="sarah-input" type="text" placeholder="Or type your question here..."
+          style="flex:1;border:1px solid #d1d5db;border-radius:8px;padding:10px 14px;font-size:0.9rem;outline:none"
+          onkeydown="if(event.key==='Enter')sendSarah()">
+        <button onclick="sendSarah()"
+          style="background:#f59e0b;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer">
+          Send
+        </button>
+      </div>
+    </div>
+
   </div>
-  <button onclick="toggleSarah()" id="sarah-btn"
-    style="width:60px;height:60px;background:linear-gradient(135deg,#f59e0b,#e07c00);border:none;border-radius:50%;box-shadow:0 4px 16px rgba(245,158,11,0.5);cursor:pointer;font-size:1.6rem;display:flex;align-items:center;justify-content:center;transition:transform 0.2s"
-    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">💬</button>
 </div>
+
 <script>
-var sarahOpen=false,sarahHistory=[];
-var SARAH_SYSTEM="당신은 Sarah로 CarInsuranceImmigrants.us의 자동차 보험 도우미입니다. 체류 신분에 관계없이 미국 이민자들이 자동차 보험을 받을 수 있도록 도와주세요. 핵심 사실: SSN 불필요. 보험회사는 ICE에 신고하지 않음. ITIN 가능. 서류 미비자도 보험 가입 가능. 따뜻하고 직접적이며 안심시켜주세요. 2-3문장으로 답하세요.";
-function toggleSarah(){
-  sarahOpen=!sarahOpen;
-  var b=document.getElementById("sarah-bubble");
-  b.style.display=sarahOpen?"flex":"none";
-  if(sarahOpen)document.getElementById("sarah-input").focus();
+var sarahHistory = [];
+var sarahMinimized = false;
+var SARAH_SYS = "You are Sarah, a professional car insurance specialist at CarInsuranceImmigrants.us. Help immigrants get car insurance in the US. Key facts: No SSN required. Insurance companies do not report to ICE. ITIN accepted by many insurers. Undocumented immigrants can get insurance. Be professional, warm, and reassuring. Collect: name, phone, vehicle year/make/model, state, license type (US/foreign/none), immigration status (optional). Keep responses under 3 sentences.";
+
+function minimizeSarah() {
+  document.getElementById('sarah-panel').style.display = 'none';
+  document.getElementById('sarah-toggle').style.display = 'block';
+  sarahMinimized = true;
 }
-function addMsg(text,role){
-  var msgs=document.getElementById("sarah-messages");
-  var div=document.createElement("div");
-  div.style.cssText=role==="user"
-    ?"background:#f59e0b;color:#fff;border-radius:12px 12px 4px 12px;padding:10px 14px;font-size:0.9rem;max-width:85%;align-self:flex-end;margin-left:auto"
-    :"background:#f0f4f8;border-radius:12px 12px 12px 4px;padding:12px 14px;font-size:0.9rem;max-width:88%";
-  div.textContent=text;
+
+function toggleSarah() {
+  document.getElementById('sarah-panel').style.display = 'block';
+  document.getElementById('sarah-toggle').style.display = 'none';
+  sarahMinimized = false;
+}
+
+function addMsg(text, role) {
+  var msgs = document.getElementById('sarah-messages');
+  var div = document.createElement('div');
+  if (role === 'user') {
+    div.style.cssText = 'background:#0f2944;color:#fff;border-radius:12px 12px 4px 12px;padding:10px 14px;font-size:0.9rem;max-width:85%;align-self:flex-end;margin-left:auto;line-height:1.5';
+  } else {
+    div.style.cssText = 'background:#fff;border-radius:12px 12px 12px 4px;padding:12px 14px;font-size:0.9rem;color:#374151;box-shadow:0 1px 4px rgba(0,0,0,0.08);max-width:90%;line-height:1.5';
+  }
+  div.textContent = text;
   msgs.appendChild(div);
-  msgs.scrollTop=msgs.scrollHeight;
+  msgs.scrollTop = msgs.scrollHeight;
 }
-async function sendSarah(){
-  var input=document.getElementById("sarah-input");
-  var msg=input.value.trim();
-  if(!msg)return;
-  input.value="";
-  addMsg(msg,"user");
-  sarahHistory.push({role:"user",content:msg});
-  var typing=document.createElement("div");
-  typing.id="sarah-typing";
-  typing.style.cssText="background:#f0f4f8;border-radius:12px;padding:10px 14px;font-size:0.85rem;color:#999;max-width:85%";
-  typing.textContent="...";
-  document.getElementById("sarah-messages").appendChild(typing);
-  try{
-    var res=await fetch("https://api.anthropic.com/v1/messages",{
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({
-        model:"claude-haiku-4-5-20251001",
-        max_tokens:300,
-        system:SARAH_SYSTEM,
-        messages:sarahHistory
+
+function sarahStep2() {
+  var year = document.getElementById('s-year').value;
+  var make = document.getElementById('s-make').value;
+  var model = document.getElementById('s-model').value;
+  var state = document.getElementById('s-state').value;
+  if (!year || !make || !state) {
+    alert('Please select the year, make, and state.');
+    return;
+  }
+  document.getElementById('sarah-step1').style.display = 'none';
+  document.getElementById('sarah-step2').style.display = 'block';
+  addMsg('Vehicle: ' + year + ' ' + make + ' ' + model + ' — ' + state, 'user');
+  sarahHistory.push({role:'user', content:'My vehicle is a ' + year + ' ' + make + ' ' + model + ' in ' + state});
+}
+
+async function sarahSubmit() {
+  var name = document.getElementById('s-name').value.trim();
+  var phone = document.getElementById('s-phone').value.trim();
+  var license = document.getElementById('s-license').value;
+  var status = document.getElementById('s-status').value;
+  if (!name || !phone) {
+    alert('Please enter your name and phone number.');
+    return;
+  }
+  var year = document.getElementById('s-year').value;
+  var make = document.getElementById('s-make').value;
+  var model = document.getElementById('s-model').value;
+  var state = document.getElementById('s-state').value;
+  var leadData = {name,phone,year,make,model,state,license,status,page:window.location.href,time:new Date().toISOString()};
+  console.log('LEAD:', JSON.stringify(leadData));
+  
+  document.getElementById('sarah-step2').style.display = 'none';
+  document.getElementById('sarah-chat').style.display = 'block';
+  
+  var summary = name + ', ' + year + ' ' + make + ' ' + (model||'') + ', ' + state + ', ' + (license||'not specified');
+  sarahHistory.push({role:'user', content:'My details: ' + summary});
+  addMsg(name + ', ' + year + ' ' + make + ' — ' + state, 'user');
+  
+  var typing = document.createElement('div');
+  typing.id = 'sarah-typing';
+  typing.style.cssText = 'background:#f0f4f8;border-radius:12px;padding:10px 14px;font-size:0.85rem;color:#9ca3af';
+  typing.textContent = '...';
+  document.getElementById('sarah-messages').appendChild(typing);
+  
+  try {
+    var res = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        model:'claude-haiku-4-5-20251001',
+        max_tokens:200,
+        system: SARAH_SYS,
+        messages: sarahHistory
       })
     });
-    var data=await res.json();
-    var reply=data.content&&data.content[0]?data.content[0].text:"Sorry, try again.";
-    var t=document.getElementById("sarah-typing");
-    if(t)t.remove();
-    addMsg(reply,"bot");
-    sarahHistory.push({role:"assistant",content:reply});
-  }catch(e){
-    var t=document.getElementById("sarah-typing");
-    if(t)t.remove();
-    addMsg("Connection error. Please try again.","bot");
+    var data = await res.json();
+    var reply = data.content && data.content[0] ? data.content[0].text : 'Thank you. A specialist will call you shortly.';
+    var t = document.getElementById('sarah-typing');
+    if(t) t.remove();
+    addMsg(reply, 'bot');
+    sarahHistory.push({role:'assistant', content:reply});
+  } catch(e) {
+    var t = document.getElementById('sarah-typing');
+    if(t) t.remove();
+    addMsg('Thank you ' + name + '. A specialist will contact you at ' + phone + ' shortly.', 'bot');
+  }
+}
+
+async function sendSarah() {
+  var input = document.getElementById('sarah-input');
+  var msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  addMsg(msg, 'user');
+  sarahHistory.push({role:'user', content:msg});
+  var typing = document.createElement('div');
+  typing.id = 'sarah-typing';
+  typing.style.cssText = 'background:#f0f4f8;border-radius:12px;padding:10px 14px;font-size:0.85rem;color:#9ca3af';
+  typing.textContent = '...';
+  document.getElementById('sarah-messages').appendChild(typing);
+  try {
+    var res = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:200,system:SARAH_SYS,messages:sarahHistory})
+    });
+    var data = await res.json();
+    var reply = data.content && data.content[0] ? data.content[0].text : 'Please try again.';
+    var t = document.getElementById('sarah-typing');
+    if(t) t.remove();
+    addMsg(reply, 'bot');
+    sarahHistory.push({role:'assistant', content:reply});
+  } catch(e) {
+    var t = document.getElementById('sarah-typing');
+    if(t) t.remove();
+    addMsg('Connection issue. Please try again.', 'bot');
   }
 }
 </script>
