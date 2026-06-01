@@ -1,0 +1,31 @@
+name: "FIX — Sarah V3 + nav cleanup"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Sarah V3
+        run: python3 sarah_v3.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
+          git add -A
+          git diff --staged --quiet || git commit -m "feat: Sarah V3 — open by default, minimal friction, nav cleanup"
+          git push --force origin main
