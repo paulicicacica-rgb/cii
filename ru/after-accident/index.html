@@ -852,317 +852,65 @@
 
 
 
-<!-- Sarah V3 -->
-<style>
-#sarah-wrap {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  width: 380px;
-  max-width: calc(100vw - 32px);
-  font-family: system-ui, -apple-system, sans-serif;
-  direction: ltr;
-}
-#sarah-panel {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.2);
-  overflow: hidden;
-  animation: sarahSlide 0.3s ease;
-}
-@keyframes sarahSlide {
-  from { opacity:0; transform: translateY(20px); }
-  to { opacity:1; transform: translateY(0); }
-}
-.sarah-hdr {
-  background: linear-gradient(135deg, #0f2944, #1a4a7a);
-  padding: 14px 18px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.sarah-msgs {
-  background: #f8fafc;
-  padding: 14px;
-  min-height: 70px;
-  max-height: 180px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.sarah-bot-msg {
-  background: #fff;
-  border-radius: 12px 12px 12px 4px;
-  padding: 10px 14px;
-  font-size: 0.88rem;
-  color: #374151;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  max-width: 92%;
-  line-height: 1.5;
-}
-.sarah-user-msg {
-  background: #0f2944;
-  color: #fff;
-  border-radius: 12px 12px 4px 12px;
-  padding: 9px 13px;
-  font-size: 0.88rem;
-  max-width: 85%;
-  align-self: flex-end;
-  margin-left: auto;
-  line-height: 1.5;
-}
-.sarah-input-row {
-  padding: 10px 12px;
-  border-top: 1px solid #e5e7eb;
-  display: flex;
-  gap: 8px;
-}
-.sarah-input-row input {
-  flex: 1;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  padding: 9px 12px;
-  font-size: 0.88rem;
-  outline: none;
-}
-.sarah-input-row button {
-  background: #f59e0b;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 9px 16px;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-.sarah-form {
-  padding: 12px 14px;
-  border-top: 1px solid #e5e7eb;
-}
-.sarah-form-title {
-  font-weight: 700;
-  color: #0f2944;
-  font-size: 0.88rem;
-  margin-bottom: 10px;
-}
-.sarah-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7px;
-  margin-bottom: 7px;
-}
-.sarah-grid select, .sarah-grid input {
-  border: 1px solid #d1d5db;
-  border-radius: 7px;
-  padding: 8px 9px;
-  font-size: 0.82rem;
-  background: #fff;
-  width: 100%;
-  color: #374151;
-}
-.sarah-submit {
-  width: 100%;
-  background: linear-gradient(135deg, #16a34a, #15803d);
-  color: #fff;
-  border: none;
-  border-radius: 9px;
-  padding: 11px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 8px;
-}
-.sarah-privacy {
-  font-size: 0.72rem;
-  color: #9ca3af;
-  text-align: center;
-  margin-top: 6px;
-}
-#sarah-minimize {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  background: linear-gradient(135deg, #0f2944, #1a4a7a);
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  padding: 12px 20px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  display: none;
-}
-</style>
 
-<div id="sarah-wrap">
-  <div id="sarah-panel">
-    <div class="sarah-hdr">
-      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face"
-           alt="Sarah" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.3);flex-shrink:0"
-           onerror="this.style.display='none'">
+<!-- Sarah Widget -->
+<div id="sarah-wrap" style="position:fixed;bottom:24px;right:24px;z-index:9999;width:380px;max-width:calc(100vw - 32px);font-family:system-ui,-apple-system,sans-serif">
+  <div id="sarah-panel" style="background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.2);overflow:hidden">
+    <div style="background:linear-gradient(135deg,#0f2944,#1a4a7a);padding:14px 18px;display:flex;align-items:center;gap:12px">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" alt="Sarah" style="width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid rgba(245,158,11,0.5);flex-shrink:0" onerror="this.style.display='none'">
       <div style="flex:1">
-        <div style="color:#fff;font-weight:700;font-size:0.95rem">Сара</div>
-        <div style="color:rgba(255,255,255,0.7);font-size:0.75rem">Специалист по страхованию</div>
-        <div style="display:flex;align-items:center;gap:5px;margin-top:2px">
-          <div style="width:6px;height:6px;background:#22c55e;border-radius:50%"></div>
-          <span style="color:rgba(255,255,255,0.65);font-size:0.7rem">Online</span>
-        </div>
+        <div style="color:#fff;font-weight:700;font-size:0.95rem">Sarah</div>
+        <div style="color:rgba(255,255,255,0.65);font-size:0.75rem">Car Insurance Specialist</div>
       </div>
-      <button onclick="sarahClose()" style="background:none;border:none;color:rgba(255,255,255,0.6);font-size:1.2rem;cursor:pointer;padding:2px 6px">—</button>
+      <div style="display:flex;align-items:center;gap:5px;margin-right:8px">
+        <div style="width:7px;height:7px;background:#22c55e;border-radius:50%"></div>
+        <span style="color:rgba(255,255,255,0.65);font-size:0.72rem">Online</span>
+      </div>
+      <button onclick="toggleSarah()" style="background:none;border:none;color:rgba(255,255,255,0.6);font-size:1.2rem;cursor:pointer;padding:2px 6px">—</button>
     </div>
-
-    <div class="sarah-msgs" id="sarah-msgs">
-      <div class="sarah-bot-msg">Здравствуйте, я Сара. Я помогу вам найти автостраховку — независимо от вашей ситуации. Как вас зовут?</div>
+    <div id="sarah-msgs" style="background:#f8fafc;padding:14px;min-height:100px;max-height:260px;overflow-y:auto;display:flex;flex-direction:column;gap:10px">
+      <div style="background:#fff;border-radius:12px 12px 12px 4px;padding:11px 14px;font-size:0.88rem;color:#374151;box-shadow:0 1px 3px rgba(0,0,0,0.07);max-width:92%;line-height:1.55">Здравствуйте, я Сара. Я помогу найти автостраховку. Как вас зовут?</div>
     </div>
-
-    <!-- Text input (shown first) -->
-    <div class="sarah-input-row" id="sarah-text-row">
-      <input id="sarah-input" type="text" placeholder="Введите здесь..."
-        onkeydown="if(event.key==='Enter')sarahSend()">
-      <button onclick="sarahSend()">&#8594;</button>
+    <div id="sarah-step1" style="padding:12px 14px;border-top:1px solid #e5e7eb">
+      <div style="display:flex;gap:8px">
+        <input id="sarah-input" type="text" placeholder="Type here..." style="flex:1;border:1px solid #d1d5db;border-radius:8px;padding:10px 13px;font-size:0.88rem;outline:none" onkeydown="if(event.key==='Enter')sarahSend()">
+        <button onclick="sarahSend()" style="background:#f59e0b;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer">&#8594;</button>
+      </div>
+      <div style="text-align:center;font-size:0.72rem;color:#9ca3af;margin-top:5px">Free · Confidential · No SSN required</div>
     </div>
-
-    <!-- Car form (shown after name + phone collected) -->
-    <div class="sarah-form" id="sarah-car-form" style="display:none">
-      <div class="sarah-form-title">Расскажите о вашем автомобиле</div>
-      <div class="sarah-grid">
-        <select id="s-year"><option value="">Year</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option></select>
-        <select id="s-make"><option value="">Make</option><option value="Acura">Acura</option><option value="Audi">Audi</option><option value="BMW">BMW</option><option value="Buick">Buick</option><option value="Cadillac">Cadillac</option><option value="Chevrolet">Chevrolet</option><option value="Chrysler">Chrysler</option><option value="Dodge">Dodge</option><option value="Ford">Ford</option><option value="GMC">GMC</option><option value="Honda">Honda</option><option value="Hyundai">Hyundai</option><option value="Infiniti">Infiniti</option><option value="Jeep">Jeep</option><option value="Kia">Kia</option><option value="Lexus">Lexus</option><option value="Lincoln">Lincoln</option><option value="Mazda">Mazda</option><option value="Mercedes-Benz">Mercedes-Benz</option><option value="Mitsubishi">Mitsubishi</option><option value="Nissan">Nissan</option><option value="Ram">Ram</option><option value="Subaru">Subaru</option><option value="Tesla">Tesla</option><option value="Toyota">Toyota</option><option value="Volkswagen">Volkswagen</option><option value="Volvo">Volvo</option><option value="Other">Other</option></select>
+    <div id="sarah-step2" style="display:none;padding:14px;border-top:1px solid #e5e7eb">
+      <div style="font-weight:700;color:#0f2944;font-size:0.88rem;margin-bottom:10px">Tell me about your vehicle</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:7px">
+        <select id="s-year" style="border:1px solid #d1d5db;border-radius:7px;padding:8px 9px;font-size:0.82rem;background:#fff;width:100%"><option value="">Year</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option><option>2000</option><option>1999</option><option>1998</option><option>1997</option><option>1995</option></select>
+        <select id="s-make" style="border:1px solid #d1d5db;border-radius:7px;padding:8px 9px;font-size:0.82rem;background:#fff;width:100%"><option value="">Make</option><option>Chevrolet</option><option>Ford</option><option>Honda</option><option>Toyota</option><option>Nissan</option><option>Hyundai</option><option>Kia</option><option>Jeep</option><option>Dodge</option><option>Ram</option><option>GMC</option><option>Subaru</option><option>Mazda</option><option>Volkswagen</option><option>BMW</option><option>Mercedes-Benz</option><option>Audi</option><option>Lexus</option><option>Tesla</option><option>Other</option></select>
       </div>
-      <div class="sarah-grid">
-        <input id="s-model" type="text" placeholder="Model">
-        <select id="s-state"><option value="">State</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option></select>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:7px">
+        <input id="s-model" type="text" placeholder="Model" style="border:1px solid #d1d5db;border-radius:7px;padding:8px 9px;font-size:0.82rem">
+        <select id="s-state" style="border:1px solid #d1d5db;border-radius:7px;padding:8px 9px;font-size:0.82rem;background:#fff;width:100%"><option value="">State</option><option>California</option><option>Texas</option><option>Florida</option><option>New York</option><option>Illinois</option><option>Pennsylvania</option><option>Ohio</option><option>Georgia</option><option>North Carolina</option><option>Michigan</option><option>New Jersey</option><option>Virginia</option><option>Washington</option><option>Arizona</option><option>Massachusetts</option><option>Tennessee</option><option>Indiana</option><option>Missouri</option><option>Maryland</option><option>Wisconsin</option><option>Colorado</option><option>Minnesota</option><option>South Carolina</option><option>Alabama</option><option>Louisiana</option><option>Kentucky</option><option>Oregon</option><option>Oklahoma</option><option>Connecticut</option><option>Utah</option><option>Nevada</option><option>Arkansas</option><option>Mississippi</option><option>Kansas</option><option>New Mexico</option><option>Nebraska</option><option>West Virginia</option><option>Idaho</option><option>Hawaii</option><option>New Hampshire</option><option>Maine</option><option>Montana</option><option>Rhode Island</option><option>Delaware</option><option>South Dakota</option><option>North Dakota</option><option>Alaska</option><option>Vermont</option><option>Wyoming</option><option>Other</option></select>
       </div>
-      <div class="sarah-grid">
-        <select id="s-license"><option value="">Права type</option><option>US Права</option><option>Foreign Права</option><option>Mexican Права</option><option>International Права</option><option>No Права</option></select>
-        <div></div>
+      <select id="s-license" style="border:1px solid #d1d5db;border-radius:7px;padding:8px 9px;font-size:0.82rem;background:#fff;width:100%;margin-bottom:10px"><option value="">License type</option><option>US License</option><option>Foreign License</option><option>Mexican License</option><option>International License</option><option>No License</option></select>
+      <button onclick="sarahSubmit()" style="width:100%;background:linear-gradient(135deg,#16a34a,#15803d);color:#fff;border:none;border-radius:9px;padding:12px;font-size:0.92rem;font-weight:700;cursor:pointer">Find My Insurance</button>
+      <div style="text-align:center;font-size:0.72rem;color:#9ca3af;margin-top:6px">Your information is never shared with any government agency</div>
+    </div>
+    <div id="sarah-step3" style="display:none;padding:12px 14px;border-top:1px solid #e5e7eb">
+      <div style="display:flex;gap:8px">
+        <input id="sarah-chat" type="text" placeholder="Ask a question..." style="flex:1;border:1px solid #d1d5db;border-radius:8px;padding:10px 13px;font-size:0.88rem;outline:none" onkeydown="if(event.key==='Enter')sarahChat()">
+        <button onclick="sarahChat()" style="background:#0f2944;color:#fff;border:none;border-radius:8px;padding:10px 16px;font-weight:700;cursor:pointer">&#8594;</button>
       </div>
-      <button class="sarah-submit" onclick="sarahFormSubmit()">Найти страховку</button>
-      <div class="sarah-privacy">Ваши данные никогда не передаются государственным органам.</div>
     </div>
   </div>
+  <button id="sarah-min-btn" onclick="toggleSarah()" style="display:none;background:linear-gradient(135deg,#0f2944,#1a4a7a);color:#fff;border:none;border-radius:30px;padding:12px 20px;font-size:0.88rem;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.2);width:100%;margin-top:8px">Chat with Sarah &rarr;</button>
 </div>
-
-<button id="sarah-minimize" onclick="sarahOpen()">Chat with Сара &rarr;</button>
-
 <script>
-var SARAH_SYS = "Вы Сара, специалист по автострахованию. Помогите пользователю. Максимум 2 предложения.";
-var sarahHistory = [];
-var sarahStep = 0; // 0=name, 1=phone, 2=car form, 3=chat
-var sarahName = '';
-var sarahPhone = '';
-
-function sarahClose() {
-  document.getElementById('sarah-wrap').style.display = 'none';
-  document.getElementById('sarah-minimize').style.display = 'block';
-}
-function sarahOpen() {
-  document.getElementById('sarah-wrap').style.display = 'block';
-  document.getElementById('sarah-minimize').style.display = 'none';
-}
-
-function addBot(text) {
-  var msgs = document.getElementById('sarah-msgs');
-  var d = document.createElement('div');
-  d.className = 'sarah-bot-msg';
-  d.textContent = text;
-  msgs.appendChild(d);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function addUser(text) {
-  var msgs = document.getElementById('sarah-msgs');
-  var d = document.createElement('div');
-  d.className = 'sarah-user-msg';
-  d.textContent = text;
-  msgs.appendChild(d);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function sarahSend() {
-  var input = document.getElementById('sarah-input');
-  var val = input.value.trim();
-  if (!val) return;
-  input.value = '';
-  addUser(val);
-
-  if (sarahStep === 0) {
-    sarahName = val;
-    sarahStep = 1;
-    setTimeout(() => addBot('Ваш номер телефона?'), 300);
-  } else if (sarahStep === 1) {
-    sarahPhone = val;
-    sarahStep = 2;
-    setTimeout(() => {
-      addBot('Got it. Now tell me about your vehicle.');
-      document.getElementById('sarah-text-row').style.display = 'none';
-      document.getElementById('sarah-car-form').style.display = 'block';
-    }, 300);
-  } else {
-    sarahHistory.push({role:'user', content:val});
-    sarahAI(val);
-  }
-}
-
-async function sarahAI(msg) {
-  var typing = document.createElement('div');
-  typing.className = 'sarah-bot-msg';
-  typing.id = 'sarah-typing';
-  typing.textContent = '...';
-  typing.style.color = '#9ca3af';
-  document.getElementById('sarah-msgs').appendChild(typing);
-  document.getElementById('sarah-msgs').scrollTop = 9999;
-  try {
-    var res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 150,
-        system: SARAH_SYS,
-        messages: sarahHistory
-      })
-    });
-    var data = await res.json();
-    var reply = data.content && data.content[0] ? data.content[0].text : 'Please try again.';
-    var t = document.getElementById('sarah-typing');
-    if(t) t.remove();
-    addBot(reply);
-    sarahHistory.push({role:'assistant',content:reply});
-  } catch(e) {
-    var t = document.getElementById('sarah-typing');
-    if(t) t.remove();
-    addBot('Please try again.');
-  }
-}
-
-async function sarahFormSubmit() {
-  var year = document.getElementById('s-year').value;
-  var make = document.getElementById('s-make').value;
-  var model = document.getElementById('s-model').value;
-  var state = document.getElementById('s-state').value;
-  var license = document.getElementById('s-license').value;
-  if (!year || !make || !state) {
-    alert('Please select year, make and state.');
-    return;
-  }
-  var lead = {name:sarahName, phone:sarahPhone, year, make, model, state, license, url:window.location.href, time:new Date().toISOString()};
-  console.log('LEAD CAPTURED:', JSON.stringify(lead));
-  
-  document.getElementById('sarah-car-form').style.display = 'none';
-  document.getElementById('sarah-text-row').style.display = 'flex';
-  sarahStep = 3;
-  
-  var summary = sarahName + ', ' + year + ' ' + make + ' ' + (model||'') + ' in ' + state + ', ' + (license||'');
-  sarahHistory.push({role:'user', content:'My details: ' + summary});
-  addUser(year + ' ' + make + ' — ' + state);
-  
-  await sarahAI('User submitted: ' + summary + '. Confirm you received it and let them know a specialist will be in touch.');
-}
+var sarahOpen=true,sarahStep=0,sarahName='',sarahPhone='',sarahHist=[];
+var SSYS="Вы Сара, специалист по автострахованию. Отвечайте по-русски. Максимум 2 предложения. Page: "+document.title+". URL: "+window.location.pathname;
+setTimeout(function(){if(!sarahOpen)toggleSarah();},2500);
+function toggleSarah(){sarahOpen=!sarahOpen;document.getElementById('sarah-panel').style.display=sarahOpen?'block':'none';document.getElementById('sarah-min-btn').style.display=sarahOpen?'none':'block';}
+function sarahAddBot(t){var m=document.getElementById('sarah-msgs');var d=document.createElement('div');d.style.cssText='background:#fff;border-radius:12px 12px 12px 4px;padding:11px 14px;font-size:0.88rem;color:#374151;box-shadow:0 1px 3px rgba(0,0,0,0.07);max-width:92%;line-height:1.55';d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight;}
+function sarahAddUser(t){var m=document.getElementById('sarah-msgs');var d=document.createElement('div');d.style.cssText='background:#0f2944;color:#fff;border-radius:12px 12px 4px 12px;padding:10px 13px;font-size:0.88rem;max-width:85%;align-self:flex-end;margin-left:auto;line-height:1.5';d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight;}
+function sarahSend(){var i=document.getElementById('sarah-input');var v=i.value.trim();if(!v)return;i.value='';sarahAddUser(v);if(sarahStep===0){sarahName=v;sarahStep=1;setTimeout(()=>sarahAddBot('And your phone number?'),300);}else if(sarahStep===1){sarahPhone=v;sarahStep=2;setTimeout(()=>{sarahAddBot('Got it. Now tell me about your vehicle.');document.getElementById('sarah-step1').style.display='none';document.getElementById('sarah-step2').style.display='block';},300);}};
+async function sarahSubmit(){var year=document.getElementById('s-year').value;var make=document.getElementById('s-make').value;var state=document.getElementById('s-state').value;var model=document.getElementById('s-model').value;var license=document.getElementById('s-license').value;if(!year||!make||!state){alert('Please select year, make and state.');return;}var lead={name:sarahName,phone:sarahPhone,year,make,model,state,license,url:window.location.href,time:new Date().toISOString()};console.log('LEAD:',JSON.stringify(lead));document.getElementById('sarah-step2').style.display='none';document.getElementById('sarah-step3').style.display='block';sarahStep=3;sarahAddUser(year+' '+make+' — '+state);sarahHist.push({role:'user',content:'Details: '+sarahName+', '+sarahPhone+', '+year+' '+make+' '+model+', '+state+', '+license});setTimeout(async()=>{try{var r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:150,system:SSYS,messages:sarahHist})});var d=await r.json();var rep=d.content&&d.content[0]?d.content[0].text:'Thank you. A specialist will contact you shortly.';sarahAddBot(rep);sarahHist.push({role:'assistant',content:rep})}catch(e){sarahAddBot('Thank you '+sarahName+'. A specialist will contact you at '+sarahPhone+' shortly.');}},400);}
+async function sarahChat(){var i=document.getElementById('sarah-chat');var msg=i.value.trim();if(!msg)return;i.value='';sarahAddUser(msg);sarahHist.push({role:'user',content:msg});try{var r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:150,system:SSYS,messages:sarahHist})});var d=await r.json();var rep=d.content&&d.content[0]?d.content[0].text:'Please try again.';sarahAddBot(rep);sarahHist.push({role:'assistant',content:rep})}catch(e){sarahAddBot('Please try again.');}}
 </script>
 </body>
 </html>
